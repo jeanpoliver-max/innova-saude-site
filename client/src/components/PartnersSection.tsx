@@ -21,7 +21,7 @@ export default function PartnersSection() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="py-14 bg-white border-y border-teal-100/50" ref={ref}>
+    <section className="py-14 bg-white border-y border-[#5B9BD5]/15" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -29,7 +29,7 @@ export default function PartnersSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <p className="text-sm font-semibold text-teal-600 uppercase tracking-wider mb-1">
+          <p className="text-sm font-semibold text-[#1B4F7A] uppercase tracking-wider mb-1">
             Parceiros e Fornecedores
           </p>
           <h3 className="text-xl lg:text-2xl font-bold text-slate-800">
@@ -46,7 +46,7 @@ export default function PartnersSection() {
             {[...partners, ...partners].map((name, i) => (
               <div
                 key={`${name}-${i}`}
-                className="shrink-0 px-8 py-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-teal-200 hover:bg-teal-50/50 transition-all duration-300"
+                className="shrink-0 px-8 py-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-[#5B9BD5]/30 hover:bg-blue-50/50 transition-all duration-300"
               >
                 <span className="text-base font-semibold text-slate-400 whitespace-nowrap">{name}</span>
               </div>

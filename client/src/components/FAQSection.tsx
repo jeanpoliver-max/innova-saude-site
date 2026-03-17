@@ -37,18 +37,18 @@ function FAQItem({ faq, isOpen, toggle }: { faq: typeof faqs[0]; isOpen: boolean
   return (
     <div
       className={`rounded-2xl border transition-all duration-300 ${
-        isOpen ? "bg-white border-teal-200 shadow-lg shadow-teal-100/30" : "bg-white border-teal-100/50 hover:border-teal-200"
+        isOpen ? "bg-white border-[#5B9BD5]/30 shadow-lg shadow-[#5B9BD5]/10" : "bg-white border-[#5B9BD5]/15 hover:border-[#5B9BD5]/30"
       }`}
     >
       <button
         onClick={toggle}
         className="w-full flex items-center justify-between p-5 lg:p-6 text-left"
       >
-        <span className={`text-base lg:text-lg font-semibold pr-4 ${isOpen ? "text-teal-700" : "text-slate-800"}`}>
+        <span className={`text-base lg:text-lg font-semibold pr-4 ${isOpen ? "text-[#1B4F7A]" : "text-slate-800"}`}>
           {faq.q}
         </span>
         <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
-          isOpen ? "rotate-180 text-teal-600" : "text-slate-400"
+          isOpen ? "rotate-180 text-[#5B9BD5]" : "text-slate-400"
         }`} />
       </button>
       <motion.div
@@ -71,7 +71,7 @@ export default function FAQSection() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-teal-50/30 to-white" ref={ref}>
+    <section className="section-padding bg-gradient-to-b from-blue-50/30 to-white" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,12 +79,12 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 bg-teal-100/80 text-teal-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#1B4F7A]/10 text-[#1B4F7A] text-sm font-semibold rounded-full mb-4">
             Dúvidas Frequentes
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             Perguntas{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B4F7A] to-[#7AB929]">
               frequentes
             </span>
           </h2>

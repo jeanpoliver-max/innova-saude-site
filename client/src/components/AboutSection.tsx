@@ -1,6 +1,6 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * About: Layout assimétrico com imagem e texto, badges de valores
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
@@ -41,12 +41,12 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-teal-100/80 text-teal-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#1B4F7A]/10 text-[#1B4F7A] text-sm font-semibold rounded-full mb-4">
             Sobre Nós
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Conheça a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B4F7A] to-[#7AB929]">
               Innova Saúde
             </span>
           </h2>
@@ -61,7 +61,7 @@ export default function AboutSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute -inset-3 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-[2rem] blur-lg" />
+            <div className="absolute -inset-3 bg-gradient-to-br from-[#5B9BD5]/20 to-[#7AB929]/20 rounded-[2rem] blur-lg" />
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={ABOUT_IMG}
@@ -75,11 +75,11 @@ export default function AboutSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-5 -right-5 bg-gradient-to-br from-teal-600 to-teal-700 text-white rounded-2xl p-5 shadow-xl"
+              className="absolute -bottom-5 -right-5 bg-gradient-to-br from-[#1B4F7A] to-[#2B6A9E] text-white rounded-2xl p-5 shadow-xl"
             >
               <Award className="w-8 h-8 mb-1" />
               <div className="text-2xl font-extrabold">POCT</div>
-              <div className="text-xs text-teal-100">Especialistas</div>
+              <div className="text-xs text-blue-200">Especialistas</div>
             </motion.div>
           </motion.div>
 
@@ -90,7 +90,7 @@ export default function AboutSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 leading-snug">
-              Tecnologia e inovação a favor da saúde
+              Gestão que cuida, compromisso que transforma
             </h3>
             <div className="space-y-4 text-slate-600 leading-relaxed text-base lg:text-lg">
               <p>
@@ -120,9 +120,9 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
-              className="group relative bg-gradient-to-br from-white to-teal-50/50 rounded-2xl p-7 border border-teal-100/60 hover:border-teal-200 hover:shadow-lg hover:shadow-teal-100/50 transition-all duration-300"
+              className="group relative bg-gradient-to-br from-white to-blue-50/50 rounded-2xl p-7 border border-[#5B9BD5]/20 hover:border-[#5B9BD5]/40 hover:shadow-lg hover:shadow-[#5B9BD5]/10 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mb-4 shadow-md shadow-teal-500/20 group-hover:shadow-lg group-hover:shadow-teal-500/30 transition-shadow">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-4 shadow-md shadow-[#1B4F7A]/20 group-hover:shadow-lg group-hover:shadow-[#1B4F7A]/30 transition-shadow">
                 <item.icon className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>

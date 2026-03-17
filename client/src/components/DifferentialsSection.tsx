@@ -1,6 +1,6 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * Diferenciais: Layout com números grandes e cards horizontais
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -69,7 +69,7 @@ export default function DifferentialsSection() {
   return (
     <section id="diferenciais" className="relative overflow-hidden">
       {/* Stats banner */}
-      <div className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-600 py-14 lg:py-16">
+      <div className="bg-gradient-to-r from-[#1B4F7A] via-[#2B6A9E] to-[#5B9BD5] py-14 lg:py-16">
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
@@ -89,7 +89,7 @@ export default function DifferentialsSection() {
                 <div className="text-4xl lg:text-5xl font-extrabold text-white mb-1">
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-sm lg:text-base text-teal-100">{stat.label}</div>
+                <div className="text-sm lg:text-base text-blue-100">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -105,12 +105,12 @@ export default function DifferentialsSection() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <span className="inline-block px-4 py-1.5 bg-teal-100/80 text-teal-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-[#7AB929]/15 text-[#5A9A1F] text-sm font-semibold rounded-full mb-4">
               Por Que Nos Escolher
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
               Nossos{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B4F7A] to-[#7AB929]">
                 diferenciais
               </span>
             </h2>
@@ -127,15 +127,15 @@ export default function DifferentialsSection() {
                 initial={{ opacity: 0, y: 25 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                className="group relative bg-white rounded-2xl p-7 border border-teal-100/50 hover:border-teal-200 shadow-sm hover:shadow-xl hover:shadow-teal-100/40 transition-all duration-300"
+                className="group relative bg-white rounded-2xl p-7 border border-[#5B9BD5]/15 hover:border-[#5B9BD5]/30 shadow-sm hover:shadow-xl hover:shadow-[#1B4F7A]/8 transition-all duration-300"
               >
                 {/* Number watermark */}
-                <span className="absolute top-4 right-5 text-6xl font-extrabold text-teal-50 select-none pointer-events-none group-hover:text-teal-100/60 transition-colors">
+                <span className="absolute top-4 right-5 text-6xl font-extrabold text-blue-50 select-none pointer-events-none group-hover:text-[#5B9BD5]/10 transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mb-5 shadow-md shadow-teal-500/20 group-hover:shadow-lg group-hover:shadow-teal-500/30 transition-shadow">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-5 shadow-md shadow-[#1B4F7A]/20 group-hover:shadow-lg group-hover:shadow-[#1B4F7A]/30 transition-shadow">
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>

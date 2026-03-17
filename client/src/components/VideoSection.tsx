@@ -42,10 +42,10 @@ export default function VideoSection() {
   };
 
   return (
-    <section className="relative section-padding overflow-hidden bg-gradient-to-b from-slate-900 via-teal-950 to-slate-900" ref={sectionRef}>
+    <section className="relative section-padding overflow-hidden bg-gradient-to-b from-[#0F2A3F] via-[#1B4F7A] to-[#0F2A3F]" ref={sectionRef}>
       {/* Decorative blobs */}
-      <div className="absolute top-[-15%] left-[-10%] w-[500px] h-[500px] rounded-full bg-teal-600/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-[-15%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-600/10 blur-3xl pointer-events-none" />
+      <div className="absolute top-[-15%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#5B9BD5]/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[-15%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#7AB929]/10 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Section header */}
@@ -55,12 +55,12 @@ export default function VideoSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 bg-teal-500/20 text-teal-300 text-sm font-semibold rounded-full mb-4 border border-teal-500/20">
+          <span className="inline-block px-4 py-1.5 bg-[#5B9BD5]/20 text-[#5B9BD5] text-sm font-semibold rounded-full mb-4 border border-[#5B9BD5]/20">
             Vídeo Institucional
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
             Conheça a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B9BD5] to-[#7AB929]">
               Innova Saúde
             </span>
           </h2>
@@ -79,7 +79,7 @@ export default function VideoSection() {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
             {/* Glow effect behind video */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-teal-500/20 via-cyan-500/20 to-teal-500/20 rounded-2xl blur-xl" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#5B9BD5]/20 via-[#7AB929]/20 to-[#5B9BD5]/20 rounded-2xl blur-xl" />
 
             <div className="relative bg-black rounded-2xl overflow-hidden">
               <video
@@ -106,8 +106,8 @@ export default function VideoSection() {
                     className="relative"
                   >
                     {/* Pulse ring */}
-                    <div className="absolute inset-0 w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-teal-500/30 animate-ping" />
-                    <div className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-2xl shadow-teal-500/40 group-hover:from-teal-400 group-hover:to-teal-500 transition-all duration-300 group-hover:scale-110">
+                    <div className="absolute inset-0 w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-[#5B9BD5]/30 animate-ping" />
+                    <div className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center shadow-2xl shadow-[#1B4F7A]/40 group-hover:from-[#5B9BD5] group-hover:to-[#7AB929] transition-all duration-300 group-hover:scale-110">
                       <Play className="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="white" />
                     </div>
                   </motion.div>

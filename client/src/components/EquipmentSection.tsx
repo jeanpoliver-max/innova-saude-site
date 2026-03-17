@@ -1,6 +1,6 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * Equipamentos: Showcase com imagem central e lista de equipamentos
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -43,23 +43,21 @@ export default function EquipmentSection() {
 
   return (
     <section id="equipamentos" className="section-padding bg-white relative overflow-hidden">
-      {/* Decorative */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-teal-50/50 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#5B9BD5]/5 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10" ref={ref}>
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 bg-teal-100/80 text-teal-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#1B4F7A]/10 text-[#1B4F7A] text-sm font-semibold rounded-full mb-4">
             Equipamentos
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             Tecnologia de{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B4F7A] to-[#7AB929]">
               última geração
             </span>
           </h2>
@@ -83,10 +81,9 @@ export default function EquipmentSection() {
                 className="w-full h-auto object-cover aspect-[4/3]"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal-900/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B4F7A]/30 via-transparent to-transparent" />
             </div>
 
-            {/* Feature badges */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Zap, label: "Resultados Rápidos", sub: "Em minutos" },
@@ -99,14 +96,14 @@ export default function EquipmentSection() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
-                  className="flex items-center gap-3 bg-teal-50/80 rounded-xl p-3.5 border border-teal-100/60"
+                  className="flex items-center gap-3 bg-blue-50/80 rounded-xl p-3.5 border border-[#5B9BD5]/20"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center shrink-0">
                     <feat.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <div className="text-sm font-bold text-slate-800">{feat.label}</div>
-                    <div className="text-xs text-teal-600">{feat.sub}</div>
+                    <div className="text-xs text-[#5B9BD5]">{feat.sub}</div>
                   </div>
                 </motion.div>
               ))}
@@ -126,8 +123,8 @@ export default function EquipmentSection() {
                 onClick={() => setActiveIdx(i)}
                 className={`group rounded-2xl p-5 border transition-all duration-300 cursor-pointer ${
                   activeIdx === i
-                    ? "bg-gradient-to-r from-teal-600 to-teal-500 border-teal-500 shadow-lg shadow-teal-500/20"
-                    : "bg-white border-teal-100/60 hover:border-teal-200 hover:shadow-md"
+                    ? "bg-gradient-to-r from-[#1B4F7A] to-[#2B6A9E] border-[#1B4F7A] shadow-lg shadow-[#1B4F7A]/20"
+                    : "bg-white border-[#5B9BD5]/20 hover:border-[#5B9BD5]/40 hover:shadow-md"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -135,7 +132,7 @@ export default function EquipmentSection() {
                     {eq.name}
                   </h4>
                   <ChevronRight className={`w-5 h-5 transition-transform ${
-                    activeIdx === i ? "text-white/80 rotate-90" : "text-teal-400 group-hover:translate-x-1"
+                    activeIdx === i ? "text-white/80 rotate-90" : "text-[#5B9BD5] group-hover:translate-x-1"
                   }`} />
                 </div>
 
@@ -145,7 +142,7 @@ export default function EquipmentSection() {
                     animate={{ opacity: 1, height: "auto" }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="text-sm text-teal-100 leading-relaxed mb-3">{eq.desc}</p>
+                    <p className="text-sm text-blue-100 leading-relaxed mb-3">{eq.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {eq.features.map((f) => (
                         <span key={f} className="px-3 py-1 bg-white/20 text-white text-xs font-medium rounded-full">

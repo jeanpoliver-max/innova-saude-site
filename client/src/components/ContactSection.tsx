@@ -1,6 +1,6 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * Contato: Formulário + informações de contato lado a lado
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -11,17 +11,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Endereço",
-    lines: ["Rua da Inovação, 100", "Centro - São Paulo - SP", "CEP: 01000-000"],
+    lines: ["Rua Victor Meirelles, 411", "CEP: 88.133-370", "Palhoça - SC - Brasil"],
   },
   {
     icon: Phone,
-    title: "Telefone",
-    lines: ["(00) 0000-0000", "0800 000 0000"],
+    title: "Telefone / WhatsApp",
+    lines: ["(48) 99112-5309"],
+    href: "https://wa.me/5548991125309",
   },
   {
     icon: Mail,
     title: "E-mail",
-    lines: ["contato@innovasaude.com.br", "comercial@innovasaude.com.br"],
+    lines: ["gestao@innovasaude.com.br"],
+    href: "mailto:gestao@innovasaude.com.br",
   },
   {
     icon: Clock,
@@ -44,7 +46,11 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+    // Build WhatsApp message with form data
+    const msg = `Olá! Meu nome é ${formData.name}.\n\nEmpresa: ${formData.company || "Não informada"}\nAssunto: ${formData.subject}\n\n${formData.message}\n\nContato: ${formData.phone || formData.email}`;
+    const whatsUrl = `https://wa.me/5548991125309?text=${encodeURIComponent(msg)}`;
+    window.open(whatsUrl, "_blank");
+    toast.success("Redirecionando para o WhatsApp...");
     setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
   };
 
@@ -53,8 +59,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contato" className="section-padding bg-gradient-to-b from-white to-teal-50/30 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-teal-100/20 blur-3xl pointer-events-none" />
+    <section id="contato" className="section-padding bg-gradient-to-b from-white to-blue-50/30 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[#5B9BD5]/10 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10" ref={ref}>
         <motion.div
@@ -63,12 +69,12 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 bg-teal-100/80 text-teal-700 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#1B4F7A]/10 text-[#1B4F7A] text-sm font-semibold rounded-full mb-4">
             Fale Conosco
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             Entre em{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B4F7A] to-[#7AB929]">
               contato
             </span>
           </h2>
@@ -86,7 +92,7 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg shadow-teal-100/30 border border-teal-100/50">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg shadow-[#1B4F7A]/5 border border-[#5B9BD5]/15">
               <div className="grid sm:grid-cols-2 gap-5 mb-5">
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nome Completo</label>
@@ -96,7 +102,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -108,7 +114,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -119,8 +125,8 @@ export default function ContactSection() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all"
-                    placeholder="(00) 00000-0000"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
+                    placeholder="(48) 99999-9999"
                   />
                 </div>
                 <div>
@@ -130,7 +136,7 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
                     placeholder="Nome da empresa"
                   />
                 </div>
@@ -143,14 +149,14 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
                 >
                   <option value="">Selecione um assunto</option>
-                  <option value="cotacao">Solicitar Cotação</option>
-                  <option value="equipamentos">Informações sobre Equipamentos</option>
-                  <option value="assistencia">Assistência Técnica</option>
-                  <option value="treinamento">Treinamento</option>
-                  <option value="outros">Outros</option>
+                  <option value="Solicitar Cotação">Solicitar Cotação</option>
+                  <option value="Informações sobre Equipamentos">Informações sobre Equipamentos</option>
+                  <option value="Assistência Técnica">Assistência Técnica</option>
+                  <option value="Treinamento">Treinamento</option>
+                  <option value="Outros">Outros</option>
                 </select>
               </div>
 
@@ -162,14 +168,14 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all resize-none"
                   placeholder="Descreva como podemos ajudá-lo..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-teal-500/25 hover:shadow-xl hover:shadow-teal-500/35 hover:from-teal-700 hover:to-teal-600 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-[#1B4F7A] to-[#2B6A9E] text-white font-bold rounded-xl shadow-lg shadow-[#1B4F7A]/25 hover:shadow-xl hover:shadow-[#1B4F7A]/35 hover:from-[#163F62] hover:to-[#1B4F7A] transition-all duration-300"
               >
                 <Send className="w-4.5 h-4.5" />
                 Enviar Mensagem
@@ -190,9 +196,9 @@ export default function ContactSection() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                className="flex gap-4 bg-white rounded-2xl p-5 border border-teal-100/50 shadow-sm"
+                className="flex gap-4 bg-white rounded-2xl p-5 border border-[#5B9BD5]/15 shadow-sm"
               >
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shrink-0 shadow-md shadow-teal-500/20">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center shrink-0 shadow-md shadow-[#1B4F7A]/20">
                   <info.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -206,7 +212,7 @@ export default function ContactSection() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5548991125309"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 text-white shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300"
@@ -216,7 +222,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="text-sm font-bold">WhatsApp</div>
-                <div className="text-xs text-emerald-100">Atendimento rápido e direto</div>
+                <div className="text-xs text-emerald-100">Atendimento rápido pelo (48) 99112-5309</div>
               </div>
             </a>
           </motion.div>

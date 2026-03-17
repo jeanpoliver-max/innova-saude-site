@@ -1,8 +1,10 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * Footer: Escuro com gradiente, links organizados, redes sociais
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
+
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/logo-transparent_57153529.png";
 
 const footerLinks = [
   {
@@ -29,7 +31,7 @@ const footerLinks = [
       { label: "Assistência Técnica", href: "#contato" },
       { label: "Treinamento", href: "#contato" },
       { label: "Cotação", href: "#contato" },
-      { label: "FAQ", href: "#" },
+      { label: "FAQ", href: "#faq" },
     ],
   },
 ];
@@ -57,31 +59,32 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg" style={{ fontFamily: "var(--font-heading)" }}>i</span>
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-lg font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-                  Innova Saúde
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-teal-400 font-medium">
-                  Point-of-Care
-                </span>
-              </div>
+              <img
+                src={LOGO_URL}
+                alt="Innova Saúde"
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </div>
+            <p className="text-sm text-slate-400 leading-relaxed mb-2">
+              Gestão que cuida, compromisso que transforma!
+            </p>
             <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-sm">
               Soluções inovadoras em diagnóstico Point-of-Care. Tecnologia de ponta 
               para resultados rápidos e precisos ao alcance das suas mãos.
             </p>
             <div className="space-y-2.5">
-              <a href="tel:+5500000000000" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-teal-400 transition-colors">
-                <Phone className="w-4 h-4" /> (00) 0000-0000
+              <a href="https://wa.me/5548991125309" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7AB929] transition-colors">
+                <MessageCircle className="w-4 h-4" /> (48) 99112-5309
               </a>
-              <a href="mailto:contato@innovasaude.com.br" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-teal-400 transition-colors">
-                <Mail className="w-4 h-4" /> contato@innovasaude.com.br
+              <a href="tel:+5548991125309" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors">
+                <Phone className="w-4 h-4" /> (48) 99112-5309
               </a>
-              <div className="flex items-center gap-2.5 text-sm text-slate-400">
-                <MapPin className="w-4 h-4 shrink-0" /> São Paulo - SP, Brasil
+              <a href="mailto:gestao@innovasaude.com.br" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors">
+                <Mail className="w-4 h-4" /> gestao@innovasaude.com.br
+              </a>
+              <div className="flex items-start gap-2.5 text-sm text-slate-400">
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5" /> 
+                <span>Rua Victor Meirelles, 411<br />CEP: 88.133-370 - Palhoça - SC - Brasil</span>
               </div>
             </div>
           </div>
@@ -96,7 +99,7 @@ export default function Footer() {
                     <a
                       href={link.href}
                       onClick={(e) => handleNavClick(e, link.href)}
-                      className="text-sm text-slate-400 hover:text-teal-400 transition-colors"
+                      className="text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors"
                     >
                       {link.label}
                     </a>
@@ -113,20 +116,24 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Innova Saúde. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-3">
-            {[
-              { icon: Instagram, href: "#", label: "Instagram" },
-              { icon: Facebook, href: "#", label: "Facebook" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-            ].map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-teal-600 flex items-center justify-center transition-colors duration-200"
-              >
-                <social.icon className="w-4 h-4 text-slate-400 hover:text-white" />
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/innovasaude.lab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 flex items-center justify-center transition-all duration-200"
+            >
+              <Instagram className="w-4 h-4 text-slate-400 group-hover:text-white" />
+            </a>
+            <a
+              href="https://wa.me/5548991125309"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-emerald-600 flex items-center justify-center transition-colors duration-200"
+            >
+              <MessageCircle className="w-4 h-4 text-slate-400" />
+            </a>
           </div>
         </div>
       </div>
