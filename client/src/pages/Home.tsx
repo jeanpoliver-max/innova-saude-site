@@ -1,25 +1,37 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+/*
+ * Design: "Vital Flow" — Organicismo Tecnológico
+ * Home: Página principal com todas as seções do site
+ * Tipografia: Plus Jakarta Sans (headings) + DM Sans (body)
+ * Paleta: Teal/Cyan primary, Coral accent, Slate neutrals
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import PartnersSection from "@/components/PartnersSection";
+import AboutSection from "@/components/AboutSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import EquipmentSection from "@/components/EquipmentSection";
+import DifferentialsSection from "@/components/DifferentialsSection";
+import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
+export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <PartnersSection />
+        <AboutSection />
+        <SolutionsSection />
+        <EquipmentSection />
+        <DifferentialsSection />
+        <CTASection />
+        <FAQSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
