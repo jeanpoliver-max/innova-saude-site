@@ -3,6 +3,7 @@
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  */
 import { Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/logo-transparent_57153529.png";
 
@@ -13,7 +14,7 @@ const footerLinks = [
       { label: "Sobre Nós", href: "#sobre" },
       { label: "Diferenciais", href: "#diferenciais" },
       { label: "Trabalhe Conosco", href: "#contato" },
-      { label: "Política de Privacidade", href: "#" },
+      { label: "Política de Privacidade", href: "/politica-de-privacidade", isRoute: true },
     ],
   },
   {
@@ -96,13 +97,22 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {group.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      onClick={(e) => handleNavClick(e, link.href)}
-                      className="text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {('isRoute' in link && link.isRoute) ? (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                        className="text-sm text-slate-400 hover:text-[#5B9BD5] transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

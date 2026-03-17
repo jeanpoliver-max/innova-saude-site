@@ -71,7 +71,7 @@ export default function FAQSection() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-blue-50/30 to-white" ref={ref}>
+    <section id="faq" className="section-padding bg-gradient-to-b from-blue-50/30 to-white" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
