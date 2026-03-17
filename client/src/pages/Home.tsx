@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PartnersSection from "@/components/PartnersSection";
 import AboutSection from "@/components/AboutSection";
+import VideoSection from "@/components/VideoSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import EquipmentSection from "@/components/EquipmentSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
@@ -24,6 +25,7 @@ export default function Home() {
         <HeroSection />
         <PartnersSection />
         <AboutSection />
+        <VideoSection />
         <SolutionsSection />
         <EquipmentSection />
         <DifferentialsSection />
