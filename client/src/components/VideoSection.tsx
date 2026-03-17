@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Play, Volume2, VolumeX } from "lucide-react";
 
-const VIDEO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/INNOVASAUDE-INSTITUCIONAL_2948bb20.MOV";
+const VIDEO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/innova-institucional_024ba553.mp4";
 
 export default function VideoSection() {
   const sectionRef = useRef(null);
