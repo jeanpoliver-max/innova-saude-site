@@ -2,6 +2,7 @@
  * Design: "Vital Flow" — Paleta da Logo Innova Saúde
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  * CONTEÚDO REAL — Apenas os 3 parceiros reais do portfólio
+ * Logos com tamanho uniforme e proporcional
  */
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -20,7 +21,7 @@ const partners = [
   {
     name: "Nihon Kohden",
     desc: "Celltac Alpha — Hematologia",
-    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/nihon-kohden-logo_7a6a76f0.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/nihon-kohden-logo-cropped_5f3cee19.png",
   },
 ];
 
@@ -45,7 +46,7 @@ export default function PartnersSection() {
           </h3>
         </motion.div>
 
-        {/* 3 partner cards */}
+        {/* 3 partner cards — logos uniformes */}
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {partners.map((partner, i) => (
             <motion.div
@@ -55,11 +56,11 @@ export default function PartnersSection() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.15 }}
               className="group bg-gradient-to-br from-white to-blue-50/30 rounded-2xl p-8 border border-[#5B9BD5]/15 hover:border-[#5B9BD5]/30 hover:shadow-lg hover:shadow-[#5B9BD5]/10 transition-all duration-300 text-center"
             >
-              <div className="h-16 flex items-center justify-center mb-5">
+              <div className="h-20 flex items-center justify-center mb-5 px-4">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-14 max-w-[180px] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100"
+                  className="w-full max-w-[200px] h-auto max-h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100"
                   loading="lazy"
                 />
               </div>
