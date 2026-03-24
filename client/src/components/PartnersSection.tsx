@@ -10,17 +10,17 @@ const partners = [
   {
     name: "FUJIFILM",
     desc: "Dri-Chem NX600 — Bioquímica Seca",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Fujifilm_logo.svg/320px-Fujifilm_logo.svg.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/fujifilm-logo_1f8185e9.png",
   },
   {
     name: "WAMA Diagnóstica",
     desc: "URIVISION, COAGMASTER, WF500",
-    logo: "https://www.wamadiagnostica.com.br/wp-content/uploads/2021/03/logo-wama.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/wama-logo_abc54639.png",
   },
   {
     name: "Nihon Kohden",
     desc: "Celltac Alpha — Hematologia",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nihon_Kohden_logo.svg/320px-Nihon_Kohden_logo.svg.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/nihon-kohden-logo_7a6a76f0.png",
   },
 ];
 
