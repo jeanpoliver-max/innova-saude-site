@@ -152,10 +152,11 @@ export default function ContactSection() {
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#5B9BD5]/30 focus:border-[#5B9BD5] transition-all"
                 >
                   <option value="">Selecione um assunto</option>
-                  <option value="Solicitar Cotação">Solicitar Cotação</option>
+                  <option value="Solicitar Proposta de Locação">Solicitar Proposta de Locação</option>
                   <option value="Informações sobre Equipamentos">Informações sobre Equipamentos</option>
                   <option value="Assistência Técnica">Assistência Técnica</option>
                   <option value="Treinamento">Treinamento</option>
+                  <option value="Parceria Comercial">Parceria Comercial</option>
                   <option value="Outros">Outros</option>
                 </select>
               </div>

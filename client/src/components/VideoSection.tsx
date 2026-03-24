@@ -65,8 +65,8 @@ export default function VideoSection() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Assista ao nosso vídeo institucional e descubra como estamos transformando 
-            o diagnóstico laboratorial com soluções Point-of-Care de última geração.
+            Assista ao nosso vídeo institucional e descubra como transformamos a experiência 
+            assistencial com locação de equipamentos e gestão integrada de diagnóstico POCT.
           </p>
         </motion.div>
 

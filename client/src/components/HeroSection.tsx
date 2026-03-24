@@ -2,6 +2,7 @@
  * Design: "Vital Flow" — Paleta da Logo Innova Saúde
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
  * Hero: Split-screen assimétrico com imagem e texto
+ * CONTEÚDO REAL — Slogan e dados da apresentação comercial
  */
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
@@ -35,42 +36,41 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1B4F7A] leading-[1.1] tracking-tight mb-6">
-              Diagnósticos{" "}
+              Gestão que cuida,{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B9BD5] to-[#7AB929]">
-                rápidos e precisos
-              </span>{" "}
-              ao alcance das suas mãos
+                compromisso que transforma
+              </span>
             </h1>
 
             <p className="text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 max-w-xl">
-              A Innova Saúde oferece as melhores soluções em equipamentos Point-of-Care, 
-              proporcionando agilidade e eficiência nos diagnósticos laboratoriais com 
-              tecnologia de ponta e suporte especializado.
+              Tecnologia, conformidade e cuidado a serviço da vida. Soluções completas em 
+              diagnóstico Point-of-Care para hospitais, UPAs, ambulatórios e UBSs, com 
+              locação de equipamentos e gestão integrada.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => scrollTo("#solucoes")}
+                onClick={() => scrollTo("#equipamentos")}
                 className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-[#1B4F7A] to-[#2B6A9E] text-white font-semibold rounded-2xl shadow-lg shadow-[#1B4F7A]/25 hover:shadow-xl hover:shadow-[#1B4F7A]/35 hover:from-[#163F62] hover:to-[#1B4F7A] transition-all duration-300"
               >
-                Conheça Nossas Soluções
+                Conheça Nosso Portfólio
                 <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => scrollTo("#sobre")}
+                onClick={() => scrollTo("#contato")}
                 className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-[#1B4F7A] font-semibold rounded-2xl border-2 border-[#5B9BD5]/30 hover:border-[#5B9BD5]/50 hover:bg-blue-50 transition-all duration-300 shadow-sm"
               >
                 <Play className="w-4 h-4" />
-                Saiba Mais
+                Fale Conosco
               </button>
             </div>
 
-            {/* Stats */}
+            {/* Stats — dados reais */}
             <div className="mt-12 flex gap-8 lg:gap-12">
               {[
-                { value: "500+", label: "Equipamentos Instalados" },
-                { value: "98%", label: "Satisfação dos Clientes" },
-                { value: "24h", label: "Suporte Técnico" },
+                { value: "5", label: "Equipamentos POCT" },
+                { value: "80+", label: "Parâmetros Disponíveis" },
+                { value: "24h", label: "Suporte Remoto" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl lg:text-3xl font-extrabold text-[#1B4F7A]">{stat.value}</div>

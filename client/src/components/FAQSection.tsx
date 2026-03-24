@@ -1,6 +1,7 @@
 /*
- * Design: "Vital Flow" — Organicismo Tecnológico
- * FAQ: Accordion com perguntas frequentes sobre POCT
+ * Design: "Vital Flow" — Paleta da Logo Innova Saúde
+ * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
+ * CONTEÚDO REAL — FAQ baseado no portfólio e modelo de negócio real
  */
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -8,28 +9,32 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "O que é Point-of-Care (POCT)?",
-    a: "Point-of-Care Testing (POCT) refere-se a exames laboratoriais realizados próximo ao paciente, fora do ambiente tradicional de laboratório. Os resultados são obtidos em minutos, permitindo diagnósticos rápidos e tomadas de decisão imediatas pelos profissionais de saúde.",
+    q: "O que é Point-of-Care Testing (POCT)?",
+    a: "Point-of-Care Testing (POCT) refere-se a exames laboratoriais realizados próximo ao paciente, fora do ambiente tradicional de laboratório. Os resultados são obtidos em minutos, permitindo diagnósticos rápidos e tomadas de decisão imediatas. É permitido e recomendado para hospitais, UPAs, ambulatórios e UBSs, conforme RDC ANVISA nº 786/2023.",
   },
   {
-    q: "Quais são as vantagens dos equipamentos Point-of-Care?",
-    a: "Os equipamentos POCT oferecem diversas vantagens: resultados em minutos (não horas), volume reduzido de amostra (geralmente sangue total por punção digital), operação simplificada, portabilidade, descentralização do diagnóstico e redução de custos operacionais.",
+    q: "Como funciona o modelo de locação de equipamentos?",
+    a: "A Innova Saúde oferece um modelo completo de locação com gestão integrada, sem necessidade de investimento inicial em aquisição de equipamentos. O pacote inclui: locação dos equipamentos, fornecimento de insumos e reagentes, manutenção preventiva e corretiva, treinamento presencial, suporte técnico remoto 24h, responsabilidade técnica com Farmacêutico Bioquímico e controle de qualidade (CQI/CQE).",
   },
   {
-    q: "Quais tipos de exames podem ser realizados com POCT?",
-    a: "Nossa linha de equipamentos permite realizar exames de bioquímica clínica (glicose, colesterol, triglicerídeos), hematologia completa, hemoglobina glicada, marcadores cardíacos, hormônios, coagulação, gasometria e diversos testes rápidos para doenças infecciosas.",
+    q: "Quais equipamentos fazem parte do portfólio?",
+    a: "Nosso portfólio inclui 5 equipamentos de alta performance: Dri-Chem NX600 (FUJIFILM) para bioquímica seca, URIVISION (WAMA) para análise de urina, Leitor Fluorescente WF500 (WAMA) para imunoensaio, Coagulômetro COAGMASTER (WAMA) para coagulação e Celltac Alpha (Nihon Kohden) para hematologia. Juntos, cobrem mais de 80 parâmetros laboratoriais.",
   },
   {
-    q: "A Innova Saúde oferece treinamento para os equipamentos?",
-    a: "Sim! Oferecemos programas completos de treinamento e capacitação para sua equipe. Nossos consultores especializados acompanham todo o processo, desde a instalação até a operação diária, garantindo que sua equipe esteja preparada para utilizar os equipamentos com máxima eficiência.",
+    q: "Quais exames podem ser realizados com os equipamentos?",
+    a: "Os equipamentos permitem realizar: bioquímica completa (glicose, colesterol, triglicerídeos, função renal, hepática, eletrólitos, PCR), parcial de urina com 10 parâmetros, hemograma completo com diferencial leucocitário, coagulação (TP, TTPA, Fibrinogênio), e imunoensaio fluorescente (Procalcitonina, PCR Ultrassensível, HbA1c, Dímero-D, Troponina I, HCG, Microalbuminúria).",
   },
   {
-    q: "Como funciona a assistência técnica?",
-    a: "Contamos com uma equipe de assistência técnica especializada disponível para manutenção preventiva e corretiva. Nosso suporte inclui atendimento remoto, visitas técnicas programadas e atendimento emergencial para garantir o funcionamento contínuo dos seus equipamentos.",
+    q: "Os equipamentos possuem registro na Anvisa?",
+    a: "Sim. Todos os equipamentos do nosso portfólio possuem registro Anvisa, conformidade CE, e certificações ISO 9001 e ISO 13485. Os resultados são validados e liberados por Farmacêutico Bioquímico legalmente habilitado, assegurando total conformidade regulatória.",
   },
   {
-    q: "É possível alugar os equipamentos ao invés de comprar?",
-    a: "Sim, oferecemos tanto a venda quanto a locação de equipamentos, com planos flexíveis que se adaptam às necessidades do seu laboratório ou clínica. Entre em contato para conhecer as opções disponíveis e encontrar a melhor solução para o seu caso.",
+    q: "A equipe de enfermagem pode operar os equipamentos?",
+    a: "Sim! Os equipamentos possuem interface simples e intuitiva, projetada para operação por equipe de enfermagem. A Innova Saúde oferece treinamento presencial completo para capacitação da equipe operacional, garantindo a operação correta e a qualidade dos resultados.",
+  },
+  {
+    q: "Como funciona o suporte técnico?",
+    a: "Oferecemos suporte técnico remoto disponível 24 horas por dia, garantindo resolução ágil de dúvidas e problemas operacionais. Além disso, realizamos manutenção preventiva e corretiva com técnicos especializados, e a gestão informatizada permite rastreabilidade completa dos resultados.",
   },
 ];
 
@@ -89,7 +94,7 @@ export default function FAQSection() {
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Tire suas dúvidas sobre nossas soluções Point-of-Care e serviços.
+            Tire suas dúvidas sobre nosso modelo de locação com gestão integrada e soluções POCT.
           </p>
         </motion.div>
 

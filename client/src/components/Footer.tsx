@@ -20,10 +20,10 @@ const footerLinks = [
   {
     title: "Soluções",
     links: [
-      { label: "Bioquímica Clínica", href: "#solucoes" },
-      { label: "Hematologia", href: "#solucoes" },
-      { label: "Imunoensaio", href: "#solucoes" },
-      { label: "Testes Rápidos", href: "#solucoes" },
+      { label: "Bioquímica Seca", href: "#equipamentos" },
+      { label: "Hematologia", href: "#equipamentos" },
+      { label: "Coagulação", href: "#equipamentos" },
+      { label: "Imunoensaio", href: "#equipamentos" },
     ],
   },
   {
@@ -31,7 +31,7 @@ const footerLinks = [
     links: [
       { label: "Assistência Técnica", href: "#contato" },
       { label: "Treinamento", href: "#contato" },
-      { label: "Cotação", href: "#contato" },
+      { label: "Solicitar Proposta", href: "#contato" },
       { label: "FAQ", href: "#faq" },
     ],
   },
@@ -70,8 +70,8 @@ export default function Footer() {
               Gestão que cuida, compromisso que transforma!
             </p>
             <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-sm">
-              Soluções inovadoras em diagnóstico Point-of-Care. Tecnologia de ponta 
-              para resultados rápidos e precisos ao alcance das suas mãos.
+              Locação de equipamentos com gestão integrada para diagnóstico 
+              Point-of-Care. Hospitais, UPAs, ambulatórios e UBSs.
             </p>
             <div className="space-y-2.5">
               <a href="https://wa.me/5548991125309" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7AB929] transition-colors">

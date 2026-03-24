@@ -1,41 +1,61 @@
 /*
  * Design: "Vital Flow" — Paleta da Logo Innova Saúde
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
+ * CONTEÚDO REAL DO PORTFÓLIO — serviços e diferenciais reais
  */
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Truck, Headphones, GraduationCap, Wrench, Users, BarChart3 } from "lucide-react";
+import {
+  Headphones,
+  GraduationCap,
+  Wrench,
+  Package,
+  Monitor,
+  ShieldCheck,
+  FlaskConical,
+  Building2,
+} from "lucide-react";
 
 const differentials = [
   {
-    icon: Headphones,
-    title: "Suporte Técnico 24h",
-    desc: "Equipe de assistência técnica disponível para garantir o funcionamento contínuo dos seus equipamentos, com atendimento ágil e especializado.",
+    icon: Building2,
+    title: "Locação de Equipamentos",
+    desc: "Modelo completo de locação de todos os equipamentos POCT, sem necessidade de investimento inicial em aquisição. Flexibilidade e previsibilidade orçamentária.",
   },
   {
-    icon: GraduationCap,
-    title: "Assessoria Científica",
-    desc: "Consultores treinados e especializados que acompanham todo o processo, desde a escolha do equipamento até a interpretação dos resultados.",
+    icon: Monitor,
+    title: "Gestão Informatizada",
+    desc: "Liberação dos resultados por software de gestão laboratorial, com rastreabilidade completa, controle de acessos, histórico de exames e segurança da informação.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Responsabilidade Técnica",
+    desc: "Resultados validados e liberados por Farmacêutico Bioquímico legalmente habilitado, assegurando conformidade regulatória e segurança assistencial.",
   },
   {
     icon: Wrench,
-    title: "Assistência Técnica",
-    desc: "Manutenção preventiva e corretiva realizada por técnicos certificados, garantindo a longevidade e precisão dos equipamentos.",
+    title: "Manutenção Preventiva e Corretiva",
+    desc: "Manutenção completa realizada por técnicos especializados, garantindo a longevidade, precisão e funcionamento contínuo dos equipamentos.",
   },
   {
-    icon: Truck,
-    title: "Logística Eficiente",
-    desc: "Estoque bem dimensionado e acondicionado, com rigoroso sistema de rastreabilidade por lotes e entregas pontuais em todo o Brasil.",
+    icon: Package,
+    title: "Fornecimento de Insumos",
+    desc: "Fornecimento de insumos, reagentes, calibradores e controles sob demanda, garantindo abastecimento contínuo sem interrupção das análises.",
   },
   {
-    icon: Users,
-    title: "Treinamento Especializado",
-    desc: "Programas de capacitação para sua equipe, garantindo a operação correta dos equipamentos e a qualidade dos resultados.",
+    icon: GraduationCap,
+    title: "Treinamento Presencial",
+    desc: "Capacitação completa da equipe operacional para operação correta dos equipamentos. Interface simples e intuitiva, operável por equipe de enfermagem.",
   },
   {
-    icon: BarChart3,
-    title: "Portfólio Completo",
-    desc: "Linha completa de equipamentos, reagentes, calibradores e controles em constante atualização com as mais recentes inovações do mercado.",
+    icon: Headphones,
+    title: "Suporte Técnico Remoto 24h",
+    desc: "Acompanhamento técnico remoto disponível 24 horas por dia, garantindo resolução ágil de dúvidas e problemas operacionais a qualquer momento.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Controle de Qualidade (CQI/CQE)",
+    desc: "Execução rotineira de controles internos (CQI) e participação em programas de ensaio de proficiência externos (CQE), assegurando precisão e conformidade.",
   },
 ];
 
@@ -73,10 +93,10 @@ export default function DifferentialsSection() {
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { value: 500, suffix: "+", label: "Equipamentos Instalados" },
-              { value: 1000, suffix: "+", label: "Clientes Atendidos" },
-              { value: 50, suffix: "+", label: "Parâmetros Disponíveis" },
-              { value: 98, suffix: "%", label: "Satisfação dos Clientes" },
+              { value: 5, suffix: "", label: "Equipamentos no Portfólio" },
+              { value: 80, suffix: "+", label: "Parâmetros Disponíveis" },
+              { value: 24, suffix: "h", label: "Suporte Técnico Remoto" },
+              { value: 100, suffix: "%", label: "Conformidade Regulatória" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -106,7 +126,7 @@ export default function DifferentialsSection() {
             className="text-center mb-14"
           >
             <span className="inline-block px-4 py-1.5 bg-[#7AB929]/15 text-[#5A9A1F] text-sm font-semibold rounded-full mb-4">
-              Por Que Nos Escolher
+              Modelo de Locação com Gestão Integrada
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
               Nossos{" "}
@@ -115,31 +135,31 @@ export default function DifferentialsSection() {
               </span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Mais do que equipamentos, oferecemos uma experiência completa em diagnóstico 
-              Point-of-Care com suporte integral.
+              Mais do que equipamentos, oferecemos um modelo completo de locação com gestão integrada. 
+              Atendimento integral às exigências da RDC ANVISA nº 786/2023 para serviços POCT.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {differentials.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 25 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                className="group relative bg-white rounded-2xl p-7 border border-[#5B9BD5]/15 hover:border-[#5B9BD5]/30 shadow-sm hover:shadow-xl hover:shadow-[#1B4F7A]/8 transition-all duration-300"
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.06 }}
+                className="group relative bg-white rounded-2xl p-6 border border-[#5B9BD5]/15 hover:border-[#5B9BD5]/30 shadow-sm hover:shadow-xl hover:shadow-[#1B4F7A]/8 transition-all duration-300"
               >
                 {/* Number watermark */}
-                <span className="absolute top-4 right-5 text-6xl font-extrabold text-blue-50 select-none pointer-events-none group-hover:text-[#5B9BD5]/10 transition-colors">
+                <span className="absolute top-3 right-4 text-5xl font-extrabold text-blue-50 select-none pointer-events-none group-hover:text-[#5B9BD5]/10 transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-5 shadow-md shadow-[#1B4F7A]/20 group-hover:shadow-lg group-hover:shadow-[#1B4F7A]/30 transition-shadow">
-                    <item.icon className="w-6 h-6 text-white" />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-4 shadow-md shadow-[#1B4F7A]/20 group-hover:shadow-lg group-hover:shadow-[#1B4F7A]/30 transition-shadow">
+                    <item.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-sm font-bold text-slate-900 mb-2">{item.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

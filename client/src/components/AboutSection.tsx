@@ -1,30 +1,22 @@
 /*
  * Design: "Vital Flow" — Paleta da Logo Innova Saúde
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
+ * CONTEÚDO REAL — Missão e Valores da apresentação comercial
  */
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Target, Eye, Heart, Award } from "lucide-react";
+import { Target, Heart, Award, Lightbulb, ShieldCheck, Users, Sparkles, TrendingUp } from "lucide-react";
 
 const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/about-section-oWhiddu7QVFBsKRHGjFf6w.webp";
 
 const values = [
-  {
-    icon: Target,
-    title: "Missão",
-    text: "Oferecer soluções inovadoras em diagnóstico Point-of-Care, com assessoria técnica e científica de excelência, zelando pela satisfação dos nossos clientes e pela saúde da população.",
-  },
-  {
-    icon: Eye,
-    title: "Visão",
-    text: "Ser referência nacional em soluções Point-of-Care, reconhecida pela distribuição eficiente de produtos e serviços com qualidade e inovação.",
-  },
-  {
-    icon: Heart,
-    title: "Valores",
-    text: "Comprometimento, ética, proatividade, inovação, eficiência, empatia e sustentabilidade guiam todas as nossas ações.",
-  },
+  { icon: ShieldCheck, title: "Ética e Transparência" },
+  { icon: Lightbulb, title: "Inovação com Propósito" },
+  { icon: Award, title: "Compromisso com a Qualidade" },
+  { icon: Heart, title: "Humanização no Atendimento" },
+  { icon: TrendingUp, title: "Eficiência e Resultado" },
+  { icon: Users, title: "Colaboração e Valorização da Equipe" },
 ];
 
 export default function AboutSection() {
@@ -83,50 +75,63 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Text */}
+          {/* Text — Missão real da apresentação */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 leading-snug">
-              Gestão que cuida, compromisso que transforma
-            </h3>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center">
+                <Target className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1B4F7A]">Nossa Missão</h3>
+            </div>
             <div className="space-y-4 text-slate-600 leading-relaxed text-base lg:text-lg">
               <p>
-                A Innova Saúde é uma empresa especializada em soluções Point-of-Care (POCT), 
-                oferecendo equipamentos de diagnóstico rápido que revolucionam a forma como 
-                os profissionais de saúde atendem seus pacientes.
+                A <strong className="text-slate-800">Innova Saúde</strong> nasceu para transformar a experiência assistencial 
+                por meio de soluções inovadoras em diagnóstico Point of Care. Atuamos com tecnologia, 
+                agilidade e segurança, garantindo tempo-resposta rápido, qualidade analítica e suporte 
+                técnico especializado, sempre com ética, compromisso regulatório e humanização do cuidado.
               </p>
               <p>
-                Nosso foco está em fornecer as melhores soluções em diagnóstico laboratorial 
-                descentralizado, com equipamentos portáteis e automatizados que permitem 
-                resultados precisos em minutos, diretamente no ponto de atendimento.
+                Comércio, importação e distribuição de produtos para saúde. Oferecemos um modelo completo 
+                de locação com gestão integrada, permitido e recomendado para <strong className="text-slate-800">hospitais, UPAs, 
+                ambulatórios e UBSs</strong>.
               </p>
-              <p>
-                Com parcerias estratégicas com os principais fabricantes mundiais de tecnologia 
-                POCT, oferecemos um portfólio completo e em constante atualização, garantindo 
-                acesso às mais avançadas tecnologias de diagnóstico disponíveis no mercado.
+              <p className="text-[#1B4F7A] font-semibold italic border-l-4 border-[#7AB929] pl-4">
+                "Tecnologia, conformidade e cuidado a serviço da vida!"
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Values */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Valores — reais da apresentação */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mb-8"
+        >
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Sparkles className="w-5 h-5 text-[#7AB929]" />
+            <h3 className="text-2xl font-bold text-slate-900">Nossos Valores</h3>
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {values.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
-              className="group relative bg-gradient-to-br from-white to-blue-50/50 rounded-2xl p-7 border border-[#5B9BD5]/20 hover:border-[#5B9BD5]/40 hover:shadow-lg hover:shadow-[#5B9BD5]/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
+              className="group relative bg-gradient-to-br from-white to-blue-50/50 rounded-2xl p-5 border border-[#5B9BD5]/20 hover:border-[#5B9BD5]/40 hover:shadow-lg hover:shadow-[#5B9BD5]/10 transition-all duration-300 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-4 shadow-md shadow-[#1B4F7A]/20 group-hover:shadow-lg group-hover:shadow-[#1B4F7A]/30 transition-shadow">
-                <item.icon className="w-6 h-6 text-white" />
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#1B4F7A] to-[#5B9BD5] flex items-center justify-center mb-3 shadow-md shadow-[#1B4F7A]/20 mx-auto group-hover:shadow-lg transition-shadow">
+                <item.icon className="w-5 h-5 text-white" />
               </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
-              <p className="text-sm text-slate-600 leading-relaxed">{item.text}</p>
+              <h4 className="text-xs font-bold text-slate-800 leading-tight">{item.title}</h4>
             </motion.div>
           ))}
         </div>

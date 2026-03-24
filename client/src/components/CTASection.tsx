@@ -1,6 +1,7 @@
 /*
  * Design: "Vital Flow" — Paleta da Logo Innova Saúde
  * Cores: Azul escuro (#1B4F7A), Azul ciano (#5B9BD5), Verde limão (#7AB929)
+ * CONTEÚDO REAL — CTA focado no modelo de locação com gestão integrada
  */
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
@@ -34,21 +35,21 @@ export default function CTASection() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-            Pronto para revolucionar seus{" "}
+            Locação com gestão integrada para{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7AB929] to-[#5B9BD5]">
-              diagnósticos?
+              sua instituição
             </span>
           </h2>
           <p className="text-lg lg:text-xl text-blue-100 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Entre em contato conosco e descubra como nossas soluções Point-of-Care 
-            podem transformar a eficiência do seu laboratório ou clínica.
+            Hospitais, UPAs, ambulatórios e UBSs. Sem investimento inicial em equipamentos. 
+            Modelo completo com insumos, manutenção, treinamento, suporte 24h e responsabilidade técnica.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => scrollTo("#contato")}
               className="group inline-flex items-center gap-2.5 px-8 py-4 bg-white text-[#1B4F7A] font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all duration-300"
             >
-              Solicitar Cotação
+              Solicitar Proposta
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <a

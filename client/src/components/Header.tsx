@@ -86,7 +86,7 @@ export default function Header() {
               onClick={() => handleNavClick("#contato")}
               className="ml-3 px-6 py-2.5 bg-gradient-to-r from-[#1B4F7A] to-[#2B6A9E] text-white text-sm font-semibold rounded-xl hover:from-[#163F62] hover:to-[#1B4F7A] transition-all duration-200 shadow-md shadow-[#1B4F7A]/25 hover:shadow-lg hover:shadow-[#1B4F7A]/35"
             >
-              Solicitar Cotação
+              Solicitar Proposta
             </button>
           </nav>
 
@@ -125,7 +125,7 @@ export default function Header() {
                 onClick={() => handleNavClick("#contato")}
                 className="mt-3 w-full px-6 py-3 bg-gradient-to-r from-[#1B4F7A] to-[#2B6A9E] text-white font-semibold rounded-xl shadow-md"
               >
-                Solicitar Cotação
+                Solicitar Proposta
               </button>
             </nav>
           </motion.div>
