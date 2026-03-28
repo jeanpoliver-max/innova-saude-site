@@ -43,7 +43,7 @@ const solutions = [
   {
     icon: Microscope,
     title: "Hematologia",
-    desc: "Celltac Alpha (Nihon Kohden) — Analisador hematológico de 3 partes com até 60 amostras/hora e 19 parâmetros. Hemograma completo com diferencial leucocitário.",
+    desc: "Celltac Alpha (3 partes, 19 parâmetros) e Celltac Es MEK-7300 (5 partes, 23 parâmetros + 2 pesquisa) — Nihon Kohden. Até 60 amostras/hora com tecnologia laser patenteada. Hemograma completo com diferencial leucocitário e detecção de blastos.",
     color: "from-[#7AB929] to-[#5A9A1F]",
   },
 ];

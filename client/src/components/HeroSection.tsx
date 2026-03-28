@@ -68,7 +68,7 @@ export default function HeroSection() {
             {/* Stats — dados reais */}
             <div className="mt-12 flex gap-8 lg:gap-12">
               {[
-                { value: "5", label: "Equipamentos POCT" },
+                { value: "6", label: "Equipamentos POCT" },
                 { value: "80+", label: "Parâmetros Disponíveis" },
                 { value: "24h", label: "Suporte Remoto" },
               ].map((stat) => (

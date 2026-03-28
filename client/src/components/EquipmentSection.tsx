@@ -42,11 +42,19 @@ const equipments = [
   },
   {
     name: "Celltac Alpha — Nihon Kohden",
-    category: "Hematologia 3 Partes",
-    desc: "Analisador hematológico automático de 3 partes com até 60 amostras/hora e 19 parâmetros. Hemograma completo com diferencial leucocitário para diagnóstico preciso.",
-    features: ["60 amostras/hora", "19 parâmetros", "3 partes", "Automático"],
+    category: "Hematologia — 3 Partes",
+    desc: "Analisador hematológico automático de 3 partes com até 60 amostras/hora e 19 parâmetros. Hemograma completo com diferencial leucocitário para diagnóstico preciso e confiável.",
+    features: ["60 amostras/hora", "19 parâmetros", "3 partes (WBC)", "Automático"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/celltac-alpha_c0dc6117.png",
-    exams: "Hemograma completo com diferencial leucocitário — 19 parâmetros",
+    exams: "Hemograma completo com diferencial leucocitário de 3 partes — 19 parâmetros clínicos",
+  },
+  {
+    name: "Celltac Es MEK-7300 — Nihon Kohden",
+    category: "Hematologia — 5 Partes",
+    desc: "Analisador hematológico automatizado de 5 partes com tecnologia laser patenteada. Até 60 amostras/hora, 23 parâmetros clínicos e 2 de pesquisa. Diferencial completo de leucócitos (neutrófilos, linfócitos, monócitos, eosinófilos e basófilos) com detecção de blastos. Tela touchscreen colorida de 10.4 polegadas e volume de amostra de apenas 55 µL.",
+    features: ["60 amostras/hora", "23 parâmetros + 2 pesquisa", "5 partes (WBC)", "Tecnologia Laser"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/celltac-es-mek7300_a11365c0.webp",
+    exams: "Hemograma completo com diferencial leucocitário de 5 partes — WBC, RBC, HGB, HCT, MCV, MCH, MCHC, PLT, RDW, MPV, PDW, PCT, NEUT, LYMPH, MONO, EOS, BASO, IG#, IG%, NRBC, LFR, MFR, HFR",
   },
 ];
 

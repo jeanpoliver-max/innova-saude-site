@@ -20,7 +20,7 @@ const partners = [
   },
   {
     name: "Nihon Kohden",
-    desc: "Celltac Alpha — Hematologia",
+    desc: "Celltac Alpha e Celltac Es MEK-7300 — Hematologia",
     logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663445619617/imGYmRuaxbExofTAsafwbN/nihon-kohden-logo-cropped_5f3cee19.png",
   },
 ];
