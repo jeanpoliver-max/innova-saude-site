@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               </p>
               <ul className="list-disc pl-6 space-y-2 text-slate-600">
                 <li>Responder às solicitações de contato e cotação de equipamentos.</li>
-                <li>Fornecer informações sobre nossos produtos e serviços de Point-of-Care.</li>
+                <li>Fornecer informações sobre nossos produtos e serviços de Point of Care.</li>
                 <li>Prestar suporte técnico e assistência aos clientes.</li>
                 <li>Melhorar a experiência de navegação e funcionalidades do site.</li>
                 <li>Cumprir obrigações legais e regulatórias.</li>

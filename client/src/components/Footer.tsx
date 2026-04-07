@@ -71,7 +71,7 @@ export default function Footer() {
             </p>
             <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-sm">
               Locação de equipamentos com gestão integrada para diagnóstico 
-              Point-of-Care. Hospitais, UPAs, ambulatórios e UBSs.
+              Point of Care. Hospitais, UPAs, ambulatórios e UBSs.
             </p>
             <div className="space-y-2.5">
               <a href="https://wa.me/5548991125309" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7AB929] transition-colors">

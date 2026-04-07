@@ -9,8 +9,8 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "O que é Point-of-Care Testing (POCT)?",
-    a: "Point-of-Care Testing (POCT) refere-se a exames laboratoriais realizados próximo ao paciente, fora do ambiente tradicional de laboratório. Os resultados são obtidos em minutos, permitindo diagnósticos rápidos e tomadas de decisão imediatas. É permitido e recomendado para hospitais, UPAs, ambulatórios e UBSs, conforme RDC ANVISA nº 786/2023.",
+    q: "O que é Point of Care Testing (POCT)?",
+    a: "Point of Care Testing (POCT) refere-se a exames laboratoriais realizados próximo ao paciente, fora do ambiente tradicional de laboratório. Os resultados são obtidos em minutos, permitindo diagnósticos rápidos e tomadas de decisão imediatas. É permitido e recomendado para hospitais, UPAs, ambulatórios e UBSs, conforme RDC ANVISA nº 786/2023.",
   },
   {
     q: "Como funciona o modelo de locação de equipamentos?",

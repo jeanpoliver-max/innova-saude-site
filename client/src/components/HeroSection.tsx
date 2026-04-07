@@ -32,7 +32,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1B4F7A]/10 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-[#7AB929] animate-pulse" />
-              <span className="text-sm font-medium text-[#1B4F7A]">Soluções Point-of-Care</span>
+              <span className="text-sm font-medium text-[#1B4F7A]">Soluções Point of Care</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1B4F7A] leading-[1.1] tracking-tight mb-6">
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
             <p className="text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 max-w-xl">
               Tecnologia, conformidade e cuidado a serviço da vida. Soluções completas em 
-              diagnóstico Point-of-Care para hospitais, UPAs, ambulatórios e UBSs, com 
+              diagnóstico Point of Care para hospitais, UPAs, ambulatórios e UBSs, com 
               locação de equipamentos e gestão integrada.
             </p>
 
@@ -93,7 +93,7 @@ export default function HeroSection() {
               <div className="relative rounded-[1.5rem] overflow-hidden shadow-2xl shadow-[#1B4F7A]/15">
                 <img
                   src={HERO_IMG}
-                  alt="Profissional de saúde utilizando equipamento Point-of-Care em laboratório moderno"
+                  alt="Profissional de saúde utilizando equipamento Point of Care em laboratório moderno"
                   className="w-full h-auto object-cover aspect-[16/10]"
                   loading="eager"
                 />
