@@ -22,20 +22,18 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        # O comando abaixo entra na pasta client antes de instalar
         run: npm install
         working-directory: ./client
 
       - name: Build
-        # O comando abaixo entra na pasta client antes de construir o site
         run: npm run build
         working-directory: ./client
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # O Manus gera a pasta dist dentro de client
-          path: ./client/dist 
+          # AJUSTE AQUI: O Manus coloca o site pronto dentro de dist/public
+          path: ./client/dist/public 
 
   deploy:
     environment:
