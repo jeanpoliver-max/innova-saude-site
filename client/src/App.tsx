@@ -10,7 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 function Router() {
   return (
     /* Adicionamos o WouterRouter com a base do GitHub Pages */
-    <WouterRouter base="/innova-saude-site">
+    <WouterRouter base="/">
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/politica-de-privacidade"} component={PrivacyPolicy} />
