@@ -32,8 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # AJUSTE AQUI: O Manus coloca o site pronto dentro de dist/public
-          path: ./client/dist 
+          path: ./client/dist
 
   deploy:
     environment:
