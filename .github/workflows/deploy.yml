@@ -2,7 +2,7 @@ name: Deploy para GitHub Pages
 
 on:
   push:
-    branches: [ "main" ] # Verifique se sua branch principal se chama main
+    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -15,19 +15,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+
       - name: Install dependencies
+        # O comando abaixo entra na pasta client antes de instalar
         run: npm install
+        working-directory: ./client
+
       - name: Build
+        # O comando abaixo entra na pasta client antes de construir o site
         run: npm run build
+        working-directory: ./client
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Se o seu projeto usa 'build', troque 'dist' por 'build'
+          # O Manus gera a pasta dist dentro de client
+          path: ./client/dist 
 
   deploy:
     environment:
